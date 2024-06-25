@@ -14,10 +14,10 @@ async function fetchAdvice() {
 
 async function replaceContent() {
   const response = await fetchAdvice();
-  adviceNumber.innerText = response.advices.id;
-  adviceQuote.innerText = `${response.advices.advice}`;
+  adviceNumber.innerText = response.slip.id;
+  adviceQuote.innerText = `${response.slip.advice}`;
 }
 
 replaceContent();
 
-adviceButton.addEventListener(replaceContent);
+adviceButton.addEventListener("click", replaceContent);
